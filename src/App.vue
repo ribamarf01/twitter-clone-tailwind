@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-screen flex justify-center dark:bg-black dark:text-white">
-    <div class="w-1/6">
+    <div class="mr-4">
       <LeftNavigation />
     </div>
     <div class="w-1/3 border-2 border-white">Content</div>
