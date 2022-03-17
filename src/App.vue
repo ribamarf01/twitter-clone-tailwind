@@ -3,16 +3,19 @@
     <div class="mr-4">
       <LeftNavigation />
     </div>
-    <div class="w-1/3 border-2 border-white">Content</div>
-    <div class="w-1/6">Suggestions</div>
+    <div class="w-1/3 min-w-max border-2 border-white">Content</div>
+    <div class="">
+      <Suggestions />
+    </div>
   </div>
 </template>
 
 <script>
 import LeftNavigation from './components/LeftNavigation.vue';
+import Suggestions from './components/Suggestions.vue';
 
 export default {
-  components: { LeftNavigation }
+  components: { LeftNavigation, Suggestions }
 }
 
 </script>
