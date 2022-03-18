@@ -1,8 +1,9 @@
 <template>
   <nav class="flex flex-col justify-between w-56 mr-8 h-screen">
     <ul class="w-full">
+
       <!-- Twitter Icon -->
-      <li class="hover:bg-blue-200 w-max hover:cursor-pointer duration-300 p-3 hover:rounded-full">
+      <li class="hover:bg-blue-200 w-max hover:cursor-pointer duration-300 mt-1 p-2 hover:rounded-full">
         <img class="w-8 h-8 dark:invert" src="../assets/icons/twitter.svg" alt="Twitter logo" />
       </li>
 

@@ -3,7 +3,7 @@
     <div class="mr-4">
       <LeftNavigation />
     </div>
-    <div class="w-1/3 min-w-max border-2 border-white">Content</div>
+    <div class="w-1/3 border-x-[thin] border-gray-700">Content</div>
     <div class="">
       <Suggestions />
     </div>
