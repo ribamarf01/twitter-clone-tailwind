@@ -26,25 +26,16 @@
     <div class="flex flex-col bg-relevant w-full rounded-xl my-2">
 
       <SpinnerLoading 
-        v-if="!reccomendedAccounts"
+        v-if="!recommendedAccounts"
         class="my-24"
       />
 
       <div v-else class="flex flex-col">
         <span class="text-xl p-3 font-bold">Who to follow</span>
 
-        <div v-for="account in reccomendedAccounts" :key="account.userAccount" class="w-full hover:bg-relevant-active p-2 duration-500 hover:cursor-pointer">
-          <div class="flex justify-between items-center">
-            <div class="flex items-center">
-              <img class="w-12 h-12 rounded-full" :src='account.userImgUrl' alt="Profile picture">
-              <div class="ml-3">
-                <p class="text-sm font-bold">{{ account.username }}</p>
-                <p class="text-sm text-gray-400">@{{ account.userAccount }}</p>
-              </div>
-            </div>
-            <span class="dark:bg-white dark:text-black dark:hover:bg-gray-300 duration-500 font-bold text-sm px-4 py-2 rounded-full">Follow</span>
-          </div>
-        </div>  
+        <RecommendedAccounts
+          :recommendedAccounts="recommendedAccounts"
+        />
 
         <a class="text-sm p-3 text-blue-500 hover:bg-relevant-active hover:cursor-pointer duration-300 rounded-b-xl" href="#">Show more</a>
 
@@ -57,9 +48,10 @@
 <script>
 import SpinnerLoading from "./SpinnerLoading.vue";
 import TrendInfo from "./TrendInfo.vue";
+import RecommendedAccounts from "./RecommendedAccounts.vue";
 
 export default {
-    components: { SpinnerLoading, TrendInfo },
+    components: { SpinnerLoading, TrendInfo, RecommendedAccounts },
     data: () => ({
         trending: null,
         reccomendedAccounts: null
@@ -74,11 +66,11 @@ export default {
                     { subject: "#Something", trendWord: "No more ideas!", tweetsAbout: "247.5K" },
                     { subject: "Trending in Brazil", trendWord: "Corruption", tweetsAbout: "1.1M" }
                 ],
-                    this.reccomendedAccounts = [
-                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
-                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
-                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
-                    ];
+                this.recommendedAccounts = [
+                    { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                    { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                    { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                ];
             }, 2500);
         }
     },
