@@ -9,9 +9,7 @@
 
     <div class="flex flex-col bg-relevant w-full rounded-xl my-2">
 
-      <div v-if="!trending" class="mx-auto my-4 w-8 h-8 border-2 border-loading-inner border-t-loading-outer rounded-full animate-spin">
-        <span class="hidden">loading</span>
-      </div>
+      <SpinnerLoading v-if="!trending" />
 
       <div v-else class="flex flex-col">
         <span class="text-xl p-3 font-extrabold">What's happening</span>
@@ -29,9 +27,10 @@
     <!-- Recomended people -->
     <div class="flex flex-col bg-relevant w-full rounded-xl my-2">
 
-      <div v-if="!reccomendedAccounts" class="mx-auto my-24 w-8 h-8 border-2 border-loading-inner border-t-loading-outer rounded-full animate-spin">
-        <span class="hidden">loading</span>
-      </div>
+      <SpinnerLoading 
+        v-if="!reccomendedAccounts"
+        class="my-24"
+      />
 
       <div v-else class="flex flex-col">
         <span class="text-xl p-3 font-bold">Who to follow</span>
@@ -58,32 +57,34 @@
 </template>
 
 <script>
+import SpinnerLoading from "./SpinnerLoading.vue";
 
 export default {
-  data: () => ({
-    trending: null,
-    reccomendedAccounts: null
-  }),
-  methods: {
-    async init() {
-      setTimeout(() => {
-        this.trending = [
-          { subject: "Tech - Trending", trendWord: "NFT", tweetsAbout: "7,832" },
-          { subject: "Trending in Brazil", trendWord: "WhatsApp", tweetsAbout: "36.5K" },
-          { subject: "COVID-19 - LIVE", trendWord: "See the latest news about covid-19", tweetsAbout: "28.3K" },
-          { subject: "#Something", trendWord: "No more ideas!", tweetsAbout: "247.5K" },
-          { subject: "Trending in Brazil", trendWord: "Corruption", tweetsAbout: "1.1M" }
-        ],
-        this.reccomendedAccounts = [
-          { username: 'Ribamar Filho', userAccount: 'ribamar.f01', userImgUrl: 'https://avatars.githubusercontent.com/u/54405190?v=4', following: false },
-          { username: 'Ribamar Filho', userAccount: 'ribamar.f01', userImgUrl: 'https://avatars.githubusercontent.com/u/54405190?v=4', following: false },
-          { username: 'Ribamar Filho', userAccount: 'ribamar.f01', userImgUrl: 'https://avatars.githubusercontent.com/u/54405190?v=4', following: false },
-        ]
-      }, 2500)
-    }
-  },
-  mounted() {
-    this.init()
-  }
+    components: { SpinnerLoading },
+    data: () => ({
+        trending: null,
+        reccomendedAccounts: null
+    }),
+    methods: {
+        async init() {
+            setTimeout(() => {
+                this.trending = [
+                    { subject: "Tech - Trending", trendWord: "NFT", tweetsAbout: "7,832" },
+                    { subject: "Trending in Brazil", trendWord: "WhatsApp", tweetsAbout: "36.5K" },
+                    { subject: "COVID-19 - LIVE", trendWord: "See the latest news about covid-19", tweetsAbout: "28.3K" },
+                    { subject: "#Something", trendWord: "No more ideas!", tweetsAbout: "247.5K" },
+                    { subject: "Trending in Brazil", trendWord: "Corruption", tweetsAbout: "1.1M" }
+                ],
+                    this.reccomendedAccounts = [
+                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                        { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
+                    ];
+            }, 2500);
+        }
+    },
+    mounted() {
+        this.init();
+    }    
 }
 </script>
