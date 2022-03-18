@@ -14,11 +14,9 @@
       <div v-else class="flex flex-col">
         <span class="text-xl p-3 font-extrabold">What's happening</span>
 
-        <div class="flex flex-col p-3 hover:bg-relevant-active hover:cursor-pointer duration-300" v-for="trend in trending" :key="trend.trendWord">
-          <span class="text-xs text-gray-600">{{ trend.subject }}</span>
-          <span class="text-sm font-extrabold">{{ trend.trendWord }}</span>
-          <span class="text-xs text-gray-600">{{ trend.tweetsAbout }} Tweets</span>
-        </div>
+        <TrendInfo
+          :trending="trending"
+        />
 
         <a class="text-sm p-3 text-blue-500 hover:bg-relevant-active hover:cursor-pointer duration-300 rounded-b-xl" href="#">Show more</a>
       </div>
@@ -58,9 +56,10 @@
 
 <script>
 import SpinnerLoading from "./SpinnerLoading.vue";
+import TrendInfo from "./TrendInfo.vue";
 
 export default {
-    components: { SpinnerLoading },
+    components: { SpinnerLoading, TrendInfo },
     data: () => ({
         trending: null,
         reccomendedAccounts: null
