@@ -61,32 +61,26 @@
       </li>
     </ul>
 
-    <div class="w-64 mb-4 hover:bg-gray-600 hover:rounded-full p-2 duration-500 hover:cursor-pointer">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center">
-          <img class="w-10 h-10 rounded-full" :src='userImgUrl' alt="Profile picture">
-          <div class="ml-3">
-            <p class="text-sm font-bold">{{ username }}</p>
-            <p class="text-sm text-gray-400">@{{userAccount }}</p>
-          </div>
-        </div>
-        <img class="h-5 w-5 dark:invert" src="../assets/icons/more-horizontal.svg" alt="">
-      </div>
-    </div>
+    <MyAccount
+      :user="user"
+    />
     
   </nav>
 </template>
 
 <script>
 import NavItem from "./NavItem.vue";
+import MyAccount from './MyAccount.vue'
 
 export default {
     data: () => ({
-        username: "Ribamar Filho",
-        userAccount: "ribamar.f01",
-        userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4"
+        user: {
+          username: "Ribamar Filho",
+          userAccount: "ribamar.f01",
+          userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4"
+        }
     }),
-    components: { NavItem }
+    components: { NavItem, MyAccount }
 }
 
 </script>
