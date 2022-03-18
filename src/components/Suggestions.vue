@@ -3,7 +3,7 @@
     <!-- Search Bar -->
     <div class="flex items-center w-full bg-relevant my-2 p-3 rounded-full">
       <img class="w-5 h-5 mr-4 " src="../assets/icons/search.svg" alt="Search icon">
-      <input class="placeholder-gray-600 bg-transparent" type="text" placeholder="Search">
+      <input class="placeholder-gray-600 bg-transparent outline-none w-full" type="text" placeholder="Search">
     </div>
     <!-- Trending -->
 
@@ -65,7 +65,7 @@ export default {
                     { subject: "COVID-19 - LIVE", trendWord: "See the latest news about covid-19", tweetsAbout: "28.3K" },
                     { subject: "#Something", trendWord: "No more ideas!", tweetsAbout: "247.5K" },
                     { subject: "Trending in Brazil", trendWord: "Corruption", tweetsAbout: "1.1M" }
-                ],
+                ]
                 this.recommendedAccounts = [
                     { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
                     { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },

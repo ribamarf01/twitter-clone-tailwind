@@ -1,37 +1,56 @@
 <template>
   <nav class="flex flex-col justify-between w-56 mr-8 h-screen">
     <ul class="w-full">
+      <!-- Twitter Icon -->
       <li class="hover:bg-blue-200 w-max hover:cursor-pointer duration-300 p-3 hover:rounded-full">
         <img class="w-8 h-8 dark:invert" src="../assets/icons/twitter.svg" alt="Twitter logo" />
       </li>
-      <li class="flex items-center my-2 font-semibold w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/home.svg" alt="Home icon">
-        <span class="ml-2 font-lg">Home</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/hash.svg" alt="Explore icon">
-        <span class="ml-2 text-lg">Explore</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/bell.svg" alt="Notifications icon">
-        <span class="ml-2 text-lg">Notification</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/mail.svg" alt="Messages icon">
-        <span class="ml-2 text-lg">Messages</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/bookmark.svg" alt="Bookmarks icon">
-        <span class="ml-2 text-lg">Bookmarks</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/list.svg" alt="Lists icon">
-        <span class="ml-2 text-lg">Lists</span>
-      </li>
-      <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
-        <img class="w-6 h-6 mr-2 dark:invert" src="../assets/icons/user.svg" alt="Profile icon">
-        <span class="ml-2 text-lg">Profile</span>
-      </li>
+
+      <!-- Links -->
+
+      <NavItem
+        name="Home"
+        icon="home"
+        alt="Home icon"
+      />
+
+      <NavItem
+        name="Explore"
+        icon="hash"
+        alt="Explore icon"
+      />
+
+      <NavItem
+        name="Notification"
+        icon="bell"
+        alt="Notification icon"
+      />
+      
+      <NavItem
+        name="Messages"
+        icon="mail"
+        alt="Message icon"
+      />
+      
+      <NavItem
+        name="Bookmarks"
+        icon="bookmark"
+        alt="Bookmark icon"
+      />
+
+      <NavItem
+        name="Lists"
+        icon="list"
+        alt="Lists icon"
+      />
+
+      <NavItem
+        name="Profile"
+        icon="user"
+        alt="Profile icon"
+      />
+      
+      <!-- More uses different css -->
       <li class="flex items-center my-2 w-max hover:cursor-pointer hover:bg-gray-600 duration-300 p-3 hover:rounded-full">
         <img class="w-6 h-6 mr-2 border-2 dark:border-black rounded-full dark:invert" src="../assets/icons/more-horizontal.svg" alt="More icon">
         <span class="ml-2 text-lg">More</span>
@@ -59,13 +78,15 @@
 </template>
 
 <script>
+import NavItem from "./NavItem.vue";
 
 export default {
-  data: () => ({
-    username: 'Ribamar Filho',
-    userAccount: 'ribamar.f01',
-    userImgUrl: 'https://avatars.githubusercontent.com/u/54405190?v=4'
-  })
+    data: () => ({
+        username: "Ribamar Filho",
+        userAccount: "ribamar.f01",
+        userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4"
+    }),
+    components: { NavItem }
 }
 
 </script>
