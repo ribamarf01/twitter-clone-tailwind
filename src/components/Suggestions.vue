@@ -58,9 +58,9 @@ export default {
     }),
     methods: {
         async init() {
-            setTimeout(() => {
+            await setTimeout(() => {
                 this.trending = [
-                    { subject: "Tech - Trending", trendWord: "NFT", tweetsAbout: "7,832" },
+                    { subject: "Technology - Trending", trendWord: "NFT", tweetsAbout: "7,832" },
                     { subject: "Trending in Brazil", trendWord: "WhatsApp", tweetsAbout: "36.5K" },
                     { subject: "COVID-19 - LIVE", trendWord: "See the latest news about covid-19", tweetsAbout: "28.3K" },
                     { subject: "#Something", trendWord: "No more ideas!", tweetsAbout: "247.5K" },
@@ -71,7 +71,7 @@ export default {
                     { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
                     { username: "Ribamar Filho", userAccount: "ribamar.f01", userImgUrl: "https://avatars.githubusercontent.com/u/54405190?v=4", following: false },
                 ];
-            }, 2500);
+            }, 1500);
         }
     },
     mounted() {
