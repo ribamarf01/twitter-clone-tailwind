@@ -1,7 +1,39 @@
-# Vue 3 + Vite
+# Twitter clone with Tailwind!
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 👀 Project Overview
 
-## Recommended IDE Setup
+- 🥴 Too much twitter...
+- 👨‍💻 TailwindCSS build for Twitter, cloning the feed page, where you see the tweets coming...
+- 🔗 You can find this project live on: <i>Coming soon</i>.
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## 🔥 Techs used
+
+<div style="
+    display: inline-block
+">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" height="40" width="40" alt="VueJS icon" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" height="40" width="40" alt="TailwindCSS icon" />
+</div>
+
+## 🔧 Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production
+$ npm run build
+
+# project preview
+$ npm run preview
+
+You can also use yarn!
+```
+
+## 📷 Project images
+
+<img src="./github/images/img1.png" alt="project image 1">
+(Lots of me...😳)

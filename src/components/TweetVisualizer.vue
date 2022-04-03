@@ -1,5 +1,5 @@
 <template>
-  <div v-for="tweet in tweets" :key="tweet.userAccount" class="flex flex-col w-full px-3 border-b-[thin] border-b-gray-600 py-2">
+  <div v-for="tweet in tweets" :key="tweet.userAccount" class="flex flex-col w-full px-3 border-b-[thin] border-b-gray-600 py-4">
     <div class="flex flex-col w-full py-1">
       <div class="flex flex-row w-full">
         <img class="w-12 h-12 mr-3 rounded-full" :src="tweet.userImage" alt="user photo">

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: SegoeUI;
+  src: url(fonts/SEGOEUI.TTF);
+}
+
 * {
-  font-family: Arial, sans-serif;
+  font-family: SegoeUI;
 }
